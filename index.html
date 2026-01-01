@@ -1,70 +1,315 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Musoff</title>
-  <style>
-    body { 
-      font-family: Arial, sans-serif; 
-      max-width: 800px; 
-      margin: 40px auto; 
-      line-height: 1.6; 
-      color: #333; 
-      padding: 0 20px;
-    }
-    h1, h2 { 
-      color: #004aad; 
-    }
-    a { 
-      color: #004aad; 
-      text-decoration: none;
-    }
-    a:hover { 
-      text-decoration: underline; 
-    }
-    p { 
-      margin-bottom: 16px; 
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Musoff</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #000;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #444;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        .effective-date {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        ul {
+            margin: 10px 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        .contact-info {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Privacy Policy for Musoff</h1>
-  <p><strong>Last updated:</strong> November 2025</p>
-
-  <h2>1. Information We Collect</h2>
-  <p>Musoff (“we”, “our”, or “us”) collects information to provide a personalized and secure experience. This includes authentication data such as email address, Firebase User ID, and authentication provider (Google/Apple). We also collect user activity data, including diary entries of positive achievements, streaks (days music-free), music avoidance statistics, Quran listening time, and onboarding responses. Some onboarding responses, such as age range, goals, and referral source, are stored in plaintext, while more sensitive responses like music listening frequency and reasons are encrypted. Additionally, sensitive events such as “listened to music” actions are encrypted and stored in Supabase. Device information like iOS version and device type is also collected.</p>
-
-  <h2>2. How We Use Your Information</h2>
-  <p>We use the information collected to provide core app functionality, including syncing progress across devices, processing subscriptions via RevenueCat, sending push notifications, and improving app performance. Data is also used to track streaks, motivate users with Islamic reminders, and provide an alternative to music through Quran audio and motivational content.</p>
-
-  <h2>3. Data Storage and Security</h2>
-  <p>Data is stored both locally and remotely. Sensitive information is encrypted in Keychain and UserDefaults on the device. Remote storage is provided via Supabase, with sensitive data encrypted before transmission. Firebase Analytics is enabled to help us improve the app experience, but users may opt out. We implement industry-standard security practices to protect your information.</p>
-
-  <h2>4. Third-Party Services</h2>
-  <p>Musoff uses several third-party services: <strong>Firebase (Google)</strong> for authentication and analytics (<a href="https://firebase.google.com/support/privacy" target="_blank">privacy policy</a>), <strong>Supabase</strong> for database backend (<a href="https://supabase.com/privacy" target="_blank">privacy policy</a>), <strong>RevenueCat</strong> for subscription management (<a href="https://www.revenuecat.com/privacy" target="_blank">privacy policy</a>), <strong>Google Sign-In</strong> (<a href="https://policies.google.com/privacy" target="_blank">privacy policy</a>), and <strong>Apple Sign-In</strong> (<a href="https://www.apple.com/privacy" target="_blank">privacy policy</a>). These services may access certain user data as needed to provide their functionality.</p>
-
-  <h2>5. Permissions Requested</h2>
-  <p>The app requests the following permissions: Family Controls / Screen Time API to block music apps and monitor usage, push notifications for daily reminders, and background audio to play Quran content while using other apps.</p>
-
-  <h2>6. Data Sharing</h2>
-  <p>We do not sell or rent your personal data. Some information is stored in Supabase for syncing purposes, and subscription data is processed by RevenueCat. Data is only shared with third parties as necessary to provide app functionality.</p>
-
-  <h2>7. User Rights</h2>
-  <p>Users have the right to access their data, request deletion, and opt out of analytics tracking. Account deletion removes data from both local storage and Supabase. For requests or questions regarding your data, contact us at <strong>[your email]</strong>.</p>
-
-  <h2>8. Children’s Privacy</h2>
-  <p>We collect age range during onboarding and comply with COPPA for users under 13. GDPR requirements are followed for users in the EU.</p>
-
-  <h2>9. Data Retention</h2>
-  <p>Data is retained as long as the account exists. Users can delete their accounts to remove personal data.</p>
-
-  <h2>10. International Data Transfers</h2>
-  <p>Some data may be stored internationally via Supabase and Firebase. GDPR users have the right to access, delete, and request portability of their data.</p>
-
-  <h2>11. Contact Information</h2>
-  <p>For questions or concerns about this privacy policy or your personal data, contact us at <strong>[your email]</strong>.</p>
-
+    <h1>Privacy Policy for Musoff</h1>
+    
+    <p class="effective-date"><strong>Effective Date:</strong> [Insert Date - e.g., January 1, 2024]</p>
+    
+    <p>Musoff ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application Musoff (the "App"). Please read this policy carefully to understand our views and practices regarding your personal data and how we will treat it.</p>
+    
+    <h2>1. Information We Collect</h2>
+    
+    <h3>1.1 Personal Identification Information</h3>
+    <p>We collect the following personal information:</p>
+    <ul>
+        <li><strong>Email Address:</strong> Collected when you sign in using Google Sign-In or Sign in with Apple</li>
+        <li><strong>User Identifier:</strong> A unique identifier (Firebase UID) is generated and stored to identify your account</li>
+        <li><strong>Account Creation Date:</strong> Timestamp of when your account was created</li>
+    </ul>
+    
+    <h3>1.2 Device Information</h3>
+    <p>We automatically collect certain device information when you use the App:</p>
+    <ul>
+        <li><strong>Device Model:</strong> Your iPhone model (e.g., iPhone 14, iPhone 15)</li>
+        <li><strong>Operating System Version:</strong> Your iOS version</li>
+        <li><strong>App Version:</strong> The version of Musoff you are using</li>
+        <li><strong>Device Language:</strong> Your device's language setting</li>
+        <li><strong>Country:</strong> Inferred from your App Store location</li>
+    </ul>
+    
+    <h3>1.3 Usage Data</h3>
+    <p>We collect information about how you use the App:</p>
+    <ul>
+        <li><strong>App Opens and Sessions:</strong> When you open the App and how long you use it</li>
+        <li><strong>Screen Views:</strong> Which screens within the App you visit</li>
+        <li><strong>Feature Usage:</strong> Which features of the App you use</li>
+        <li><strong>Session Duration:</strong> How long you spend in the App</li>
+    </ul>
+    
+    <h3>1.4 App-Specific Data</h3>
+    <p>We collect and store the following data related to your use of the App:</p>
+    <ul>
+        <li><strong>Diary Entries:</strong> Positive achievement entries you create in the App (stored securely on your device and in our database)</li>
+        <li><strong>Statistics:</strong> Aggregate data including music avoidance count and Quran listening time (in seconds)</li>
+        <li><strong>Streak Data:</strong> Your current streak count and related dates</li>
+        <li><strong>Onboarding Responses:</strong> Your responses to the initial onboarding questionnaire, including:
+            <ul>
+                <li>Age group (stored in plaintext)</li>
+                <li>Goal (stored in plaintext)</li>
+                <li>Referral source (stored in plaintext)</li>
+                <li>Notification preferences (stored in plaintext)</li>
+                <li>Music listening frequency, reason, and timing (encrypted for privacy)</li>
+            </ul>
+        </li>
+        <li><strong>Music App Blocking Settings:</strong> Your selected music apps to block (stored locally on your device)</li>
+        <li><strong>Subscription Status:</strong> Information about your premium subscription status and plan</li>
+    </ul>
+    
+    <h3>1.5 Payment Information</h3>
+    <p>We do not directly collect or store payment information. All payments are processed through Apple's App Store using StoreKit. RevenueCat, our subscription management service, may process subscription-related information, but payment details are handled exclusively by Apple.</p>
+    
+    <h2>2. How We Collect Information</h2>
+    
+    <h3>2.1 Information You Provide Directly</h3>
+    <ul>
+        <li>When you sign in using Google Sign-In or Sign in with Apple, you provide your email address</li>
+        <li>When you create diary entries, you provide the content</li>
+        <li>When you complete the onboarding questionnaire, you provide your responses</li>
+        <li>When you select music apps to block, you make those selections</li>
+    </ul>
+    
+    <h3>2.2 Information Collected Automatically</h3>
+    <ul>
+        <li><strong>Analytics:</strong> Firebase Analytics (Google Analytics) automatically collects device information, app usage patterns, and screen views</li>
+        <li><strong>Authentication:</strong> Firebase Authentication collects your email address and creates a unique user identifier</li>
+        <li><strong>App Functionality:</strong> The App collects usage statistics and streak data as you use its features</li>
+    </ul>
+    
+    <h3>2.3 Information from Third Parties</h3>
+    <ul>
+        <li><strong>Google Sign-In:</strong> We receive your email address from Google when you sign in</li>
+        <li><strong>Sign in with Apple:</strong> We receive your email address (or a proxy email) from Apple when you sign in</li>
+        <li><strong>RevenueCat:</strong> We receive subscription status information from RevenueCat</li>
+        <li><strong>Apple App Store:</strong> Subscription purchase information is provided through Apple's StoreKit</li>
+    </ul>
+    
+    <h2>3. Use of Your Information</h2>
+    
+    <p>We use the information we collect to:</p>
+    <ul>
+        <li><strong>Provide and Maintain the App:</strong> To deliver the core functionality of the App, including blocking music apps, tracking progress, and providing Quran audio content</li>
+        <li><strong>Manage Your Account:</strong> To create and maintain your user account, authenticate you, and sync your data across devices</li>
+        <li><strong>Process Subscriptions:</strong> To manage your premium subscription, process payments through Apple, and provide access to premium features</li>
+        <li><strong>Improve the App:</strong> To understand how users interact with the App, identify issues, and make improvements</li>
+        <li><strong>Analytics:</strong> To analyze App usage patterns, track feature adoption, and measure user engagement (using Firebase Analytics)</li>
+        <li><strong>Personalization:</strong> To personalize your experience, such as displaying your streak, statistics, and diary entries</li>
+        <li><strong>Notifications:</strong> To send you push notifications for reminders and encouragement (only if you opt in)</li>
+        <li><strong>Customer Support:</strong> To respond to your inquiries and provide customer support</li>
+        <li><strong>Compliance:</strong> To comply with legal obligations and enforce our terms of service</li>
+    </ul>
+    
+    <h2>4. Third-Party Services and Data Sharing</h2>
+    
+    <h3>4.1 Third-Party Services We Use</h3>
+    <p>We use the following third-party services that may process your data:</p>
+    
+    <ul>
+        <li><strong>Firebase (Google):</strong>
+            <ul>
+                <li><strong>Firebase Authentication:</strong> Handles user authentication and stores your email address and user identifier</li>
+                <li><strong>Firebase Analytics (Google Analytics):</strong> Collects and analyzes app usage data, device information, and user engagement metrics</li>
+                <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
+            </ul>
+        </li>
+        <li><strong>Supabase:</strong>
+            <ul>
+                <li><strong>Purpose:</strong> Hosts our database and stores your account data, diary entries, statistics, streaks, and onboarding responses</li>
+                <li><strong>Data Stored:</strong> User account information, diary entries, statistics, streak data, and onboarding responses</li>
+                <li><strong>Privacy Policy:</strong> <a href="https://supabase.com/privacy" target="_blank">https://supabase.com/privacy</a></li>
+            </ul>
+        </li>
+        <li><strong>RevenueCat:</strong>
+            <ul>
+                <li><strong>Purpose:</strong> Manages subscription purchases, tracks subscription status, and processes subscription-related data</li>
+                <li><strong>Data Processed:</strong> Subscription status, purchase history, and subscription plan information</li>
+                <li><strong>Privacy Policy:</strong> <a href="https://www.revenuecat.com/privacy" target="_blank">https://www.revenuecat.com/privacy</a></li>
+            </ul>
+        </li>
+        <li><strong>Apple:</strong>
+            <ul>
+                <li><strong>Sign in with Apple:</strong> Provides authentication services</li>
+                <li><strong>StoreKit:</strong> Processes subscription payments (payment information is handled exclusively by Apple and is not shared with us)</li>
+                <li><strong>Privacy Policy:</strong> <a href="https://www.apple.com/privacy/" target="_blank">https://www.apple.com/privacy/</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h3>4.2 Data Sharing and Disclosure</h3>
+    <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:</p>
+    
+    <ul>
+        <li><strong>With Service Providers:</strong> We share data with the third-party services listed above (Firebase, Supabase, RevenueCat, Apple) as necessary to provide the App's functionality. These service providers are contractually obligated to protect your data and use it only for the purposes we specify.</li>
+        <li><strong>For Legal Reasons:</strong> We may disclose your information if required by law, court order, or governmental authority, or if we believe disclosure is necessary to protect our rights, property, or safety, or that of our users or others.</li>
+        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction, subject to the same privacy protections.</li>
+        <li><strong>With Your Consent:</strong> We may share your information for any other purpose with your explicit consent.</li>
+    </ul>
+    
+    <h3>4.3 Third-Party Privacy Protection</h3>
+    <p>All third-party service providers with whom we share data provide the same or equal protection of user data as stated in this Privacy Policy. Each service provider has its own privacy policy (linked above) that governs how they handle your data, and we require them to comply with applicable data protection laws.</p>
+    
+    <h2>5. Data Security</h2>
+    
+    <p>We implement appropriate technical and organizational security measures to protect your personal information:</p>
+    <ul>
+        <li><strong>Encryption:</strong> Sensitive data (such as certain onboarding responses) is encrypted before being stored in our database</li>
+        <li><strong>Secure Storage:</strong> Sensitive local data (diary entries, streak data) is stored in the iOS Keychain, which uses hardware-backed encryption</li>
+        <li><strong>Authentication:</strong> We use industry-standard authentication methods (OAuth) that do not require storing passwords</li>
+        <li><strong>Database Security:</strong> Our database uses Row-Level Security (RLS) policies to ensure users can only access their own data</li>
+        <li><strong>Secure Transmission:</strong> All data transmitted between the App and our servers is encrypted using HTTPS/TLS</li>
+    </ul>
+    
+    <p>However, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+    
+    <h2>6. Data Retention and Deletion</h2>
+    
+    <h3>6.1 Data Retention</h3>
+    <p>We retain your personal information only for as long as necessary to provide the App's services and fulfill the purposes described in this Privacy Policy:</p>
+    <ul>
+        <li><strong>Account Data:</strong> Retained for as long as your account is active</li>
+        <li><strong>Usage Data:</strong> Analytics data may be retained for up to 26 months (Firebase Analytics default retention period)</li>
+        <li><strong>Subscription Data:</strong> Retained as required by law and for accounting purposes</li>
+    </ul>
+    
+    <h3>6.2 Data Deletion</h3>
+    <p>You have the right to request deletion of your personal data at any time. To request deletion:</p>
+    <ul>
+        <li><strong>Account Deletion:</strong> You can delete your account by contacting us at the email address provided below. When you delete your account, we will delete your personal data from our systems, including:
+            <ul>
+                <li>Your account information</li>
+                <li>Your diary entries</li>
+                <li>Your statistics</li>
+                <li>Your streak data</li>
+                <li>Your onboarding responses</li>
+            </ul>
+        </li>
+        <li><strong>Analytics Data:</strong> Analytics data collected by Firebase Analytics may persist according to Firebase's data retention policies, but personal identifiers are anonymized</li>
+        <li><strong>Subscription Data:</strong> Some subscription-related data may be retained as required by law or for accounting purposes, even after account deletion</li>
+    </ul>
+    
+    <h3>6.3 Revoking Consent</h3>
+    <p>You can revoke consent for certain data processing activities:</p>
+    <ul>
+        <li><strong>Analytics:</strong> You can opt out of analytics data collection by disabling analytics in your iOS device settings (Settings → Privacy & Security → Analytics & Improvements)</li>
+        <li><strong>Notifications:</strong> You can disable push notifications at any time in your iOS device settings (Settings → Notifications → Musoff)</li>
+        <li><strong>Screen Time Access:</strong> You can revoke Screen Time (Family Controls) access at any time in your iOS device settings (Settings → Screen Time → Family Controls)</li>
+    </ul>
+    
+    <h2>7. Permissions and Access</h2>
+    
+    <p>Musoff requests the following permissions on your iOS device:</p>
+    
+    <ul>
+        <li><strong>Screen Time (Family Controls):</strong> Required to block music apps and display shield screens. You can revoke this permission at any time in Settings → Screen Time → Family Controls.</li>
+        <li><strong>Push Notifications:</strong> Used to send you daily reminders and encouragement messages. This is optional and you can deny or revoke this permission at any time in Settings → Notifications.</li>
+        <li><strong>Background Audio:</strong> Required to play Quran audio in the background. This is a standard iOS capability and does not require explicit user permission.</li>
+    </ul>
+    
+    <h2>8. Children's Privacy</h2>
+    
+    <p>Musoff is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately. If we become aware that we have collected personal information from a child under 13, we will take steps to delete that information promptly.</p>
+    
+    <h2>9. International Data Transfers</h2>
+    
+    <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that differ from those in your country. By using the App, you consent to the transfer of your information to these countries. We ensure that appropriate safeguards are in place to protect your data in accordance with this Privacy Policy, including through contractual agreements with our service providers.</p>
+    
+    <h2>10. Your Privacy Rights</h2>
+    
+    <p>Depending on your location, you may have certain rights regarding your personal data:</p>
+    
+    <ul>
+        <li><strong>The Right to Access:</strong> You have the right to request copies of your personal data</li>
+        <li><strong>The Right to Rectification:</strong> You have the right to request that we correct any information you believe is inaccurate or complete information you believe is incomplete</li>
+        <li><strong>The Right to Erasure:</strong> You have the right to request that we erase your personal data, under certain conditions</li>
+        <li><strong>The Right to Restrict Processing:</strong> You have the right to request that we restrict the processing of your personal data, under certain conditions</li>
+        <li><strong>The Right to Object to Processing:</strong> You have the right to object to our processing of your personal data, under certain conditions</li>
+        <li><strong>The Right to Data Portability:</strong> You have the right to request that we transfer the data we have collected to another organization, or directly to you, under certain conditions</li>
+    </ul>
+    
+    <p>To exercise any of these rights, please contact us using the contact information provided below. We will respond to your request within a reasonable timeframe and in accordance with applicable law.</p>
+    
+    <h2>11. California Privacy Rights</h2>
+    
+    <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act (CCPA):</p>
+    <ul>
+        <li>The right to know what personal information we collect, use, disclose, and sell</li>
+        <li>The right to delete your personal information</li>
+        <li>The right to opt-out of the sale of your personal information (we do not sell personal information)</li>
+        <li>The right to non-discrimination for exercising your privacy rights</li>
+    </ul>
+    
+    <p>To exercise these rights, please contact us using the contact information provided below.</p>
+    
+    <h2>12. Changes to This Privacy Policy</h2>
+    
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. We will notify you of any material changes by:</p>
+    <ul>
+        <li>Updating the "Effective Date" at the top of this Privacy Policy</li>
+        <li>Posting a notice in the App (for significant changes)</li>
+        <li>Sending you an email notification (if we have your email address and the change is material)</li>
+    </ul>
+    
+    <p>Your continued use of the App after the effective date of any changes constitutes your acceptance of the revised Privacy Policy. We encourage you to review this Privacy Policy periodically to stay informed about how we collect, use, and protect your information.</p>
+    
+    <h2>13. Contact Us</h2>
+    
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at:</p>
+    
+    <div class="contact-info">
+        <p><strong>Musoff</strong><br>
+        [Your Company Name, if applicable]<br>
+        Email: [Your Contact Email Address]<br>
+        [Your Address, if applicable]<br>
+        [City, State, ZIP Code, if applicable]</p>
+    </div>
+    
+    <p><em>Last Updated: [Insert Date]</em></p>
 </body>
 </html>
+
+
 
